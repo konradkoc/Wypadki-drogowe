@@ -5,6 +5,7 @@ import Chart from './components/chart/Chart'
 import SelectsContainer from './components/selects/SelectsContainer'
 
 
+
 const App = () => (
 
   <div className="App">
@@ -13,7 +14,6 @@ const App = () => (
       <SelectsContainer />
       <Chart />
   </div>
-
 )
 
-export default App;
+export default App

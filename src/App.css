@@ -25,7 +25,6 @@ body {
 .chart {
 	background-color: var(--font-white-color);
 	padding: .3rem;
-	width: 90%;
 }
 
 .select-style {
@@ -104,4 +103,3 @@ button {
   flex-shrink: 0;
   min-width: 70px;
 }
-
