@@ -6,7 +6,7 @@ import { checkSort } from './utils/checkSort'
 
 const INITIAL_STATE = {
     
-    color: 'pink',
+    color: '#32a213',
     obszar: 'polska',
     rok: 2018,
     rokPoczatkowy: 2017,
@@ -81,6 +81,11 @@ const chartReducer = (state = INITIAL_STATE, action) => {
                 rodzajSorta: action.payload,
                 labelsForTheGraph: generateLabels(state.obszar, state.rok, state.wskaznik, state.rokPoczatkowy, state.rokKoncowy, action.payload),
                 dataForTheGraph: generateData(state.obszar, state.rok, state.wskaznik, state.rokPoczatkowy, state.rokKoncowy, action.payload),
+            }
+        case chartActionTypes.SELECT_COLOR:
+            return {
+                ...state,
+                color: action.payload.hex
             }
 
         default:

@@ -29,3 +29,8 @@ export const selectSort = rodzajSorta => ({
     type: chartActionTypes.SELECT_SORT,
     payload: rodzajSorta
 })
+
+export const selectColor = ( {color} ) => ({
+    type: chartActionTypes.SELECT_COLOR,
+    payload: color
+})

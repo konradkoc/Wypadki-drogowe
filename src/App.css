@@ -8,6 +8,7 @@
   --font-black-color: #17252A;
   --font-white-color: #FEFFFF;
   --additional-color: #DEF2F1;
+  font-size: 25px;
 }
 
 body {
@@ -20,6 +21,7 @@ body {
 	padding: .5rem;
 	background-color: var(--dark-bg-color) ;
 	color: var(--font-white-color);
+
 }
 
 .chart {
@@ -29,7 +31,7 @@ body {
 
 .select-style {
 	display: block;
-	font-size: 10px;
+	font-size: 15px;
 	font-weight: 700;
 	color: #444;
 	line-height: 1.3;
