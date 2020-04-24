@@ -12,7 +12,6 @@ const App = () => (
       <Counter />
       <SelectsContainer />
       <Chart />
-
   </div>
 
 )

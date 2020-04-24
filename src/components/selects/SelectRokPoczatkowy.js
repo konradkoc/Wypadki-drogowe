@@ -14,11 +14,11 @@ const SelectRokPoczatkowy = ( { chart:{ obszar, rok, rokPoczatkowy, rokKoncowy} 
             <select id="rokPoczątkowy" autoComplete="off" onChange={selectRokPoczatkowy} value = {rokPoczatkowy} className = "select-style">
                 
                 {
-                    //If user selected rokKoncowy show only smaller values & we dont want 2018 as well
-                        years.filter(year => rokKoncowy ? year < rokKoncowy : year < 2018 ) 
-                        .map(year => (
-                        <option value={year} key ={year*3}> {year} </option>
-                        ))
+                //If user selected rokKoncowy show only smaller values & we dont want 2018 as well
+                years.filter(year => rokKoncowy ? year < rokKoncowy : year < 2018 ) 
+                .map(year => (
+                <option value={year} key ={year*3}> {year} </option>
+                ))
                 }
 
             </select>       

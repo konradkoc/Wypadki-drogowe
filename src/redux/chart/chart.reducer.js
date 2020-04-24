@@ -2,7 +2,7 @@ import { chartActionTypes } from './chart.actionTypes'
 import { generateLabels } from './utils/generateLabels'
 import { generateTitle } from './utils/generateTitle'
 import { generateData } from './utils/generateData'
-
+import { checkSort } from './utils/checkSort'
 
 const INITIAL_STATE = {
     
@@ -27,20 +27,22 @@ const chartReducer = (state = INITIAL_STATE, action) => {
             return {
                 ...state,
                 obszar: action.payload,      
-                rok: action.payload !== 'polska' ? 'okres' : state.rok ,
+                rok: action.payload !== 'polska' ? 'okres' : state.rok,
+                rodzajSorta: checkSort(action.payload, state.rok, state.rodzajSorta),
                 title: generateTitle(action.payload , state.rok, state.wskaznik, state.rokPoczatkowy, state.rokKoncowy),
-                labelsForTheGraph: generateLabels(action.payload, state.rok, state.rokPoczatkowy, state.rokKoncowy, state.rodzajSorta),
+                labelsForTheGraph: generateLabels(action.payload , state.rok, state.wskaznik, state.rokPoczatkowy, state.rokKoncowy, state.rodzajSorta),
                 dataForTheGraph: generateData(action.payload , state.rok, state.wskaznik, state.rokPoczatkowy, state.rokKoncowy, state.rodzajSorta),
+                
             }
 
         case chartActionTypes.SELECT_ROK:
             return {
                 ...state,
                 rok: action.payload,
-                labelsForTheGraph: generateLabels(state.obszar, action.payload, state.rokPoczatkowy, state.rokKoncowy, state.rodzajSorta),
+                rodzajSorta: checkSort(state.obszar, action.payload, state.rodzajSorta),
+                labelsForTheGraph: generateLabels(state.obszar , action.payload , state.wskaznik, state.rokPoczatkowy, state.rokKoncowy, state.rodzajSorta),
                 dataForTheGraph: generateData(state.obszar , action.payload , state.wskaznik, state.rokPoczatkowy, state.rokKoncowy, state.rodzajSorta),
                 title: generateTitle(state.obszar , action.payload , state.wskaznik, state.rokPoczatkowy, state.rokKoncowy)
-
             }
 
         case chartActionTypes.SELECT_ROK_POCZATKOWY:
@@ -48,7 +50,7 @@ const chartReducer = (state = INITIAL_STATE, action) => {
                 ...state,
                 rokPoczatkowy: action.payload,
                 rok: 'okres',
-                labelsForTheGraph: generateLabels(state.obszar, state.rok, action.payload, state.rokKoncowy, state.rodzajSorta),
+                labelsForTheGraph: generateLabels(state.obszar , state.rok, state.wskaznik, action.payload, state.rokKoncowy, state.rodzajSorta),
                 dataForTheGraph: generateData(state.obszar , state.rok, state.wskaznik, action.payload, state.rokKoncowy, state.rodzajSorta),
                 title: generateTitle(state.obszar , state.rok, state.wskaznik, action.payload, state.rokKoncowy )
             }
@@ -58,7 +60,7 @@ const chartReducer = (state = INITIAL_STATE, action) => {
                 ...state,
                 rokKoncowy: action.payload,
                 rok: 'okres',
-                labelsForTheGraph: generateLabels(state.obszar, state.rok, state.rokPoczatkowy, action.payload, state.rodzajSorta),
+                labelsForTheGraph: generateLabels(state.obszar , state.rok, state.wskaznik, state.rokPoczatkowy, action.payload, state.rodzajSorta),
                 dataForTheGraph: generateData(state.obszar , state.rok, state.wskaznik, state.rokPoczatkowy, action.payload, state.rodzajSorta),
                 title: generateTitle(state.obszar , state.rok, state.wskaznik, state.rokPoczatkowy, action.payload )
             }
@@ -67,6 +69,7 @@ const chartReducer = (state = INITIAL_STATE, action) => {
             return {
                 ...state,
                 wskaznik: action.payload,
+                labelsForTheGraph: generateLabels(state.obszar , state.rok, action.payload, state.rokPoczatkowy, state.rokKoncowy, state.rodzajSorta),
                 dataForTheGraph: generateData(state.obszar , state.rok, action.payload, state.rokPoczatkowy, state.rokKoncowy, state.rodzajSorta),
                 title: generateTitle(state.obszar , state.rok, action.payload, state.rokPoczatkowy, state.rokKoncowy )
 
@@ -76,8 +79,8 @@ const chartReducer = (state = INITIAL_STATE, action) => {
             return {
                 ...state,
                 rodzajSorta: action.payload,
-                labelsForTheGraph: generateLabels(state.obszar, state.rok, state.rokPoczatkowy, state.rokKoncowy, action.payload),
-                dataForTheGraph: generateLabels(state.obszar, state.rok, state.wskaznik, state.rokPoczatkowy, state.rokKoncowy, action.payload),
+                labelsForTheGraph: generateLabels(state.obszar, state.rok, state.wskaznik, state.rokPoczatkowy, state.rokKoncowy, action.payload),
+                dataForTheGraph: generateData(state.obszar, state.rok, state.wskaznik, state.rokPoczatkowy, state.rokKoncowy, action.payload),
             }
 
         default:

@@ -4,18 +4,28 @@ import { selectSort } from '../../redux/chart/chart.actions'
 
 
 
-const SelectSort = ( {chart: { rok, rodzajSorta  } , selectSort } ) => (
+const SelectSort = ( {chart: { rodzajSorta, obszar, rok} , selectSort } ) => (
 
     <div>
         <h3>Sortuj:</h3>
         <label htmlFor="sortowanie"></label>
-                <select id="sortowanie" autoComplete="off" className = "select-style" value = {rodzajSorta} onChange={selectSort}>
-                        <option value="alfabetycznie" >ALFABETYCZNIE</option>
-                        <option value="odNajstarszych" >OD NAJSTARSZYCH</option>
-                        <option value="odNajnowszych" >OD NAJNOWSZYCH</option>
-                        <option value="rosnąco" > ROSNĄCO</option>
-                        <option value="malejąco" >MALEJĄCO</option>
-                </select>
+            {
+            //we want specific select depending on user choices
+            obszar === 'polska' && rok !== 'okres' 
+            ? 
+            <select id="sortowanie" autoComplete="off" className = "select-style" value = {rodzajSorta} onChange={selectSort}> 
+                <option value="alfabetycznie" >ALFABETYCZNIE</option>
+                <option value="rosnąco" > ROSNĄCO</option>
+                <option value="malejąco" >MALEJĄCO</option>
+            </select>
+            :
+            <select id="sortowanie" autoComplete="off" className = "select-style" value = {rodzajSorta} onChange={selectSort}> 
+                <option value="odNajstarszych" >OD NAJSTARSZYCH</option>
+                <option value="odNajnowszych" >OD NAJNOWSZYCH</option>
+                <option value="rosnąco" > ROSNĄCO</option>
+                <option value="malejąco" >MALEJĄCO</option>
+            </select>
+            }              
     </div>
 ) 
 

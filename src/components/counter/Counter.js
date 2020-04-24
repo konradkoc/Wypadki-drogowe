@@ -27,7 +27,7 @@ class Counter extends Component {
         
         const speed = 600 // change speed of counter here
         //UPDATE COUNT FOR EVERY COUNTER
-        this.updateCount(speed, dataLiczbaWypadkow , dataLiczbaWypadkow/speed , 'liczbaWypadkow') // speed, target , increment = target/speed, name of state key
+        this.updateCount(speed, dataLiczbaWypadkow , dataLiczbaWypadkow/speed , 'liczbaWypadkow') // speed, target , increment = target/speed, state key
         this.updateCount(speed, dataLiczbaZabitych , dataLiczbaZabitych/speed , 'liczbaZabitych')
         this.updateCount(speed, dataLiczbaRannych , dataLiczbaRannych/speed , 'liczbaRannych')
    }

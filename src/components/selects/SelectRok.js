@@ -15,13 +15,12 @@ const SelectRok = ( {chart: {rok, obszar}, selectRok } ) => (
             className = "select-style" 
             autoComplete="off"
             value={rok}
-            onChange={selectRok}
-            >
+            onChange={selectRok}>
 
             {
-                years.map(year => (
-                <option value={year} key={year*5}>{year} </option>
-                ))
+            years.map(year => (
+            <option value={year} key={year*5}>{year} </option>
+            ))
             }
         
             <option value="okres">OKRES</option>
