@@ -16,7 +16,7 @@ const INITIAL_STATE = {
     labelsForTheGraph: generateLabels('polska', 2018, '', '', 'alfabetycznie'),
     dataForTheGraph: generateData('polska' , 2018, 'liczbaWypadkow', '', '', 'alfabetycznie'),
     title: generateTitle('polska' , 2018,'liczbaWypadkow', '', ''),
-
+    values: true,
 }
 
 

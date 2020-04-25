@@ -26,3 +26,22 @@ export const titleSize = width => {
     }
 
 }
+
+export const valuesOnChart = (values, width, labels) => {
+    
+    if(values) {
+        return {datalabels: {
+            anchor: 'end',
+            align: 'top',
+            rotation: width < 500 && labels.length ? -90 : 0,
+            labels: {    
+                value: {}             
+            },                     
+        }
+    }
+    } else {
+        return {}
+    }
+    
+    
+}
