@@ -1,4 +1,4 @@
-export const labalesDirection = (width, labels) => (
+export const labelsDirection = (width, labels) => (
     //adding option to chart depending on width and labels.length, to change text direction on mobiles
     width < 500 && labels.length > 10 ?
         [{
@@ -26,20 +26,6 @@ export const titleSize = width => {
     }
 
 }
-
-export const valuesOnChart = (values, width, labels) => (
-        {
-            datalabels: {
-            display: values,
-            anchor: 'end',
-            align: 'top',
-            rotation: width < 500 && labels.length ? -90 : 0,
-            labels: {    
-                value: {}             
-            },                     
-        }
-    }
-)
 
             
    

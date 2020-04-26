@@ -38,3 +38,7 @@ export const selectColor = ( {color} ) => ({
 export const toggleValues = () => ({
     type: chartActionTypes.TOGGLE_VALUES
 })
+
+export const toggleAverage = () => ({
+    type: chartActionTypes.TOGGLE_AVG
+})

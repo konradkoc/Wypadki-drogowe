@@ -1,13 +1,13 @@
 import React from 'react'
 import CustomButton from './CustomButton'
 import { connect } from 'react-redux'
-import { toggleValues } from '../../redux/chart/chart.actions'
+import { toggleValues, toggleAverage } from '../../redux/chart/chart.actions'
 
-const ButtonList = ({ toggleValues }) => (
+const ButtonList = ({ toggleValues, toggleAverage }) => (
 
     <div>
-        <CustomButton text = 'wartości' job = {toggleValues}/>
-        <CustomButton text = 'średnia'/>
+        <CustomButton text = 'wartości' job = {toggleValues} />
+        <CustomButton text = 'średnia' job = {toggleAverage} />
         <CustomButton text = 'zapisz'/>
     </div>  
 )
@@ -17,7 +17,8 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-    toggleValues: () => dispatch(toggleValues())
+    toggleValues: () => dispatch(toggleValues()),
+    toggleAverage: () => dispatch(toggleAverage())
 })
 
 
