@@ -18,11 +18,11 @@ const Chart = ( {chart:{ color, labelsForTheGraph, dataForTheGraph, title, value
                     borderWidth: 1
                 }]
             }}
-            width={100}
+            width={200}
             height={80}
             redraw 
             options={{
-                // animation: false,
+                // animation: true,
                 title: {
                     display: true,
                     fontSize: titleSize(window.innerWidth),
@@ -35,9 +35,9 @@ const Chart = ( {chart:{ color, labelsForTheGraph, dataForTheGraph, title, value
                         type: average ? 'line' : '' , //this just turn on and off average on chart
                         mode: 'horizontal',
                         scaleID: 'y-axis-0',
-                        value: dataForTheGraph.reduce((a,b) => a + b)/dataForTheGraph.length,
+                        value: dataForTheGraph.reduce((a,b) => a + b)/dataForTheGraph.length, //avg value
                         borderColor: 'red',
-                        borderWidth: 5,
+                        borderWidth: 2,
                     }]
                 },
                 plugins: {
@@ -45,10 +45,8 @@ const Chart = ( {chart:{ color, labelsForTheGraph, dataForTheGraph, title, value
                         display: values,
                         anchor: 'end',
                         align: 'top',
-                        rotation: window.innerWidthwidth < 500 && labelsForTheGraph.length ? -90 : 0,
-                        labels: {    
-                            value: {}             
-                        },                     
+                        rotation: window.innerWidthwidth < 500 && labelsForTheGraph.length ? -90 : 0, //for mobiles
+                        labels: { value: {} },                     
                 },    
                 },
                 legend: {display:false},
@@ -56,9 +54,9 @@ const Chart = ( {chart:{ color, labelsForTheGraph, dataForTheGraph, title, value
                     yAxes: [{
                         ticks: {
                             beginAtZero: true,                           
-                        }
+                        },
                     }],
-                    xAxes: labelsDirection(window.innerWidth, labelsForTheGraph)    
+                    xAxes: labelsDirection(window.innerWidth, labelsForTheGraph) // for mobiles
                 },
             }}
         />
@@ -68,6 +66,6 @@ const Chart = ( {chart:{ color, labelsForTheGraph, dataForTheGraph, title, value
 const mapStateToProps = state => ({
     chart: state.chart,
     })
-    
+
 
 export default connect(mapStateToProps)(Chart)

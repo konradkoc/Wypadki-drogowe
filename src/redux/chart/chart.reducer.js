@@ -98,7 +98,6 @@ const chartReducer = (state = INITIAL_STATE, action) => {
                 ...state,
                 average: !state.average
             }
-
         default:
             return {
                 ...state

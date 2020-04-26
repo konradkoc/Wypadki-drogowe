@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 const CustomButton = ( { text, job } ) => (
     <div>
         <button onClick = {job} >
-        {text}
+            {text}
         </button>
     </div>
 )
