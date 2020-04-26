@@ -1,9 +1,9 @@
 import React from 'react'
 import {connect} from 'react-redux'
 
-const CustomButton = ( { text } ) => (
+const CustomButton = ( { text, job } ) => (
     <div>
-        <button>
+        <button onClick = {job} >
         {text}
         </button>
     </div>

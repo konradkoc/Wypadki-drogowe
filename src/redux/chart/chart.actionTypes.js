@@ -6,5 +6,6 @@ export const chartActionTypes = {
     SELECT_WSKAZNIK: 'SELECT_WSKAZNIK',
     SELECT_SORT: 'SELECT_SORT',
     SELECT_COLOR: 'SELECT_COLOR',
+    TOGGLE_VALUES: 'TOGGLE_VALUES'
 }
 

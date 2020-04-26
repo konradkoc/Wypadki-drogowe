@@ -16,7 +16,7 @@ const INITIAL_STATE = {
     labelsForTheGraph: generateLabels('polska', 2018, '', '', 'alfabetycznie'),
     dataForTheGraph: generateData('polska' , 2018, 'liczbaWypadkow', '', '', 'alfabetycznie'),
     title: generateTitle('polska' , 2018,'liczbaWypadkow', '', ''),
-    values: true,
+    values: false,
 }
 
 
@@ -86,6 +86,11 @@ const chartReducer = (state = INITIAL_STATE, action) => {
             return {
                 ...state,
                 color: action.payload.hex
+            }
+        case chartActionTypes.TOGGLE_VALUES:
+            return {
+                ...state,
+                values: !state.values
             }
 
         default:

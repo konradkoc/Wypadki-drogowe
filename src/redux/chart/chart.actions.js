@@ -34,3 +34,7 @@ export const selectColor = ( {color} ) => ({
     type: chartActionTypes.SELECT_COLOR,
     payload: color
 })
+
+export const toggleValues = () => ({
+    type: chartActionTypes.TOGGLE_VALUES
+})
