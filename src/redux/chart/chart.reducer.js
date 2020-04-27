@@ -19,6 +19,7 @@ const INITIAL_STATE = {
     values: true,
     average: false,
     animation: 1000,
+    grid: true,
 }
 
 
@@ -108,6 +109,13 @@ const chartReducer = (state = INITIAL_STATE, action) => {
                 animation: 0,
                 average: !state.average
             }
+        case chartActionTypes.TOGGLE_GRID:
+            return {
+                ...state,
+                animation: 0,
+                grid: !state.grid
+            }
+ 
         default:
             return {
                 ...state

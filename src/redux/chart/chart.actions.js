@@ -42,3 +42,7 @@ export const toggleValues = () => ({
 export const toggleAverage = () => ({
     type: chartActionTypes.TOGGLE_AVG
 })
+
+export const toggleGrid = () => ({
+    type: chartActionTypes.TOGGLE_GRID
+})

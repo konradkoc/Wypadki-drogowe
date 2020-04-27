@@ -8,5 +8,6 @@ export const chartActionTypes = {
     SELECT_COLOR: 'SELECT_COLOR',
     TOGGLE_VALUES: 'TOGGLE_VALUES',
     TOGGLE_AVG: 'TOGGLE_AVG',
+    TOGGLE_GRID: 'TOGGLE_GRID',
 }
 

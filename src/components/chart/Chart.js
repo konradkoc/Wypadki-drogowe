@@ -5,7 +5,7 @@ import { labelsDirection, titleSize } from './chart.utils'
 import 'chartjs-plugin-datalabels'
 import 'chartjs-plugin-annotation'
 
-const Chart = ( {chart:{ color, labelsForTheGraph, dataForTheGraph, title, values, average, animation} } ) => (
+const Chart = ( {chart:{ color, labelsForTheGraph, dataForTheGraph, title, values, average, animation, grid} } ) => (
     <div className = 'container chart'>
         <Bar
             data={{
@@ -58,12 +58,14 @@ const Chart = ( {chart:{ color, labelsForTheGraph, dataForTheGraph, title, value
                             beginAtZero: true,
                         },
                         gridLines: {
+                            display: grid,
                             zeroLineWidth: 1,
                             zeroLineColor: 'black'
                         }
                     }],
                     xAxes: [{
                         gridLines: {
+                            display: grid,
                             zeroLineWidth: 1,
                             zeroLineColor: 'black'
                         },

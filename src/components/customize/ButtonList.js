@@ -1,18 +1,20 @@
 import React, { useState } from 'react'
 import CustomButton from './CustomButton'
 import { connect } from 'react-redux'
-import { toggleValues, toggleAverage } from '../../redux/chart/chart.actions'
+import { toggleValues, toggleAverage, toggleGrid } from '../../redux/chart/chart.actions'
 
-const ButtonList = ({ toggleValues, toggleAverage , title }) => {
+const ButtonList = ({ toggleValues, toggleAverage , toggleGrid, title }) => {
     const [image, setImage] = useState('')
 
     return (
         <div>
             <CustomButton text = 'wartości' job = {toggleValues} />
             <CustomButton text = 'średnia' job = {toggleAverage} />
+            <CustomButton text = 'siatka' job = {toggleGrid} />
 
-            <a download={title.split(' ').join('_')} href={image} >
-                <button onClick = {() => setImage(document.querySelector('canvas').toDataURL("image/png"))} >
+            <a download={title.split(' ').join('_') + '.png'} href={image} >
+                <button 
+                onClick = { () =>  setImage(document.querySelector('canvas').toDataURL("image/png", 5)) } >
                     download
                 </button>
             </a>
@@ -23,7 +25,8 @@ const ButtonList = ({ toggleValues, toggleAverage , title }) => {
 
 const mapDispatchToProps = dispatch => ({
     toggleValues: () => dispatch(toggleValues()),
-    toggleAverage: () => dispatch(toggleAverage())
+    toggleAverage: () => dispatch(toggleAverage()),
+    toggleGrid: () => dispatch(toggleGrid())
 })
 
 const mapStateToProps = state => ({
