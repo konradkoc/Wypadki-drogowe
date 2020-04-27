@@ -18,6 +18,7 @@ const INITIAL_STATE = {
     title: generateTitle('polska' , 2018,'liczbaWypadkow', '', ''),
     values: true,
     average: false,
+    animation: 1000,
 }
 
 
@@ -27,6 +28,7 @@ const chartReducer = (state = INITIAL_STATE, action) => {
         case chartActionTypes.SELECT_OBSZAR:
             return {
                 ...state,
+                animation: 1000,
                 obszar: action.payload,      
                 rok: action.payload !== 'polska' ? 'okres' : state.rok,
                 rodzajSorta: checkSort(action.payload, state.rok, state.rodzajSorta),
@@ -39,6 +41,7 @@ const chartReducer = (state = INITIAL_STATE, action) => {
         case chartActionTypes.SELECT_ROK:
             return {
                 ...state,
+                animation: 1000,
                 rok: action.payload,
                 rodzajSorta: checkSort(state.obszar, action.payload, state.rodzajSorta),
                 labelsForTheGraph: generateLabels(state.obszar , action.payload , state.wskaznik, state.rokPoczatkowy, state.rokKoncowy, state.rodzajSorta),
@@ -49,6 +52,7 @@ const chartReducer = (state = INITIAL_STATE, action) => {
         case chartActionTypes.SELECT_ROK_POCZATKOWY:
             return {
                 ...state,
+                animation: 1000,
                 rokPoczatkowy: action.payload,
                 rok: 'okres',
                 labelsForTheGraph: generateLabels(state.obszar , state.rok, state.wskaznik, action.payload, state.rokKoncowy, state.rodzajSorta),
@@ -59,6 +63,7 @@ const chartReducer = (state = INITIAL_STATE, action) => {
         case chartActionTypes.SELECT_ROK_KONCOWY:
             return {
                 ...state,
+                animation: 1000,
                 rokKoncowy: action.payload,
                 rok: 'okres',
                 labelsForTheGraph: generateLabels(state.obszar , state.rok, state.wskaznik, state.rokPoczatkowy, action.payload, state.rodzajSorta),
@@ -69,6 +74,7 @@ const chartReducer = (state = INITIAL_STATE, action) => {
         case chartActionTypes.SELECT_WSKAZNIK:
             return {
                 ...state,
+                animation: 1000,
                 wskaznik: action.payload,
                 labelsForTheGraph: generateLabels(state.obszar , state.rok, action.payload, state.rokPoczatkowy, state.rokKoncowy, state.rodzajSorta),
                 dataForTheGraph: generateData(state.obszar , state.rok, action.payload, state.rokPoczatkowy, state.rokKoncowy, state.rodzajSorta),
@@ -79,6 +85,7 @@ const chartReducer = (state = INITIAL_STATE, action) => {
         case chartActionTypes.SELECT_SORT:
             return {
                 ...state,
+                animation: 1000,
                 rodzajSorta: action.payload,
                 labelsForTheGraph: generateLabels(state.obszar, state.rok, state.wskaznik, state.rokPoczatkowy, state.rokKoncowy, action.payload),
                 dataForTheGraph: generateData(state.obszar, state.rok, state.wskaznik, state.rokPoczatkowy, state.rokKoncowy, action.payload),
@@ -86,16 +93,19 @@ const chartReducer = (state = INITIAL_STATE, action) => {
         case chartActionTypes.SELECT_COLOR:
             return {
                 ...state,
+                animation: 0,
                 color: action.payload.hex
             }
         case chartActionTypes.TOGGLE_VALUES:
             return {
                 ...state,
+                animation: 0,
                 values: !state.values
             }
         case chartActionTypes.TOGGLE_AVG:
             return {
                 ...state,
+                animation: 0,
                 average: !state.average
             }
         default:

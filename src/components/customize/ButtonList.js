@@ -11,8 +11,8 @@ const ButtonList = ({ toggleValues, toggleAverage }) => {
             <CustomButton text = 'wartości' job = {toggleValues} />
             <CustomButton text = 'średnia' job = {toggleAverage} />
 
-            <a download="ChartImage.jpg" href={image} >
-                <button onClick = {() => setImage(document.querySelector('canvas').toDataURL("image/jpg"))} >
+            <a download="wykres.png" href={image} >
+                <button onClick = {() => setImage(document.querySelector('canvas').toDataURL("image/png"))} >
                     download
                 </button>
             </a>

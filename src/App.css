@@ -5,7 +5,7 @@
   font-family: sans-serif;
   --main-bg-color: #3AAFA9;
   --dark-bg-color: #2B7A78;
-  --font-black-color: #17252A;
+  --font-black-color: black;
   --font-white-color: #FEFFFF;
   --additional-color: #DEF2F1;
   font-size: 40px;
@@ -29,7 +29,10 @@ body {
 	padding: .3rem;
 	color: black;
 }
-
+#canvas {
+    width:300px;
+    height:150px;
+}     
 .select-style {
 	display: block;
 	font-size: 15px;
@@ -61,7 +64,7 @@ body {
 	border-color: #aaa;
 	box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
 	box-shadow: 0 0 0 3px -moz-mac-focusring;
-	color: #222;
+	/* color: #222; */
 	outline: none;
 }
 .select-style option {
