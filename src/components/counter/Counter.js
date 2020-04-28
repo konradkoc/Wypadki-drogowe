@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { dataForCounter , years } from '../../redux/database'
-import { czyWiesz } from './czyWiesz'
-
+import styled from 'styled-components'
 class Counter extends Component {
     
     constructor(props) {  
@@ -11,7 +10,6 @@ class Counter extends Component {
             liczbaWypadkow: 0, 
             liczbaZabitych: 0, 
             liczbaRannych: 0,
-            czyWieszZe: ''
         }
    } 
 
@@ -45,43 +43,72 @@ class Counter extends Component {
     
 
    componentDidMount() {
-       this.startCounter()
-       const ciekawostka = czyWiesz[Math.floor(Math.random() * czyWiesz.length)]
-       this.setState({ czyWieszZe: ciekawostka })
+       this.startCounter()   
        
     }
     
 
     render() {
        
-        const { rok, liczbaWypadkow, liczbaZabitych, liczbaRannych, czyWieszZe } = this.state
+        const { rok, liczbaWypadkow, liczbaZabitych, liczbaRannych } = this.state
 
         return (
-            <div className = 'container-row'> 
-                <div className= 'counter-title'>
-                    <h2 className = "tytulCountera">{rok}</h2>
-                </div>
-                <div className = 'container-column'>
-                    <div className = 'container-column'>
-                        <span className="fas fa-car-crash"></span>
-                    <div className="counter">{liczbaWypadkow}</div>
-                    </div>
-                    <div className = 'container-column'>
-                        <span className="fas fa-skull-crossbones"></span>
-                        <div className="counter">{liczbaZabitych}</div>
-                    </div>
-                    <div className = 'container-column'>
-                        <span className="fas fa-user-injured"></span>
-                        <div className="counter">{liczbaRannych}</div>
-                    </div>
-                    <section>
-                       {czyWieszZe}
-                    </section>
-                </div>
-                
-            </div>
+                <CounterContainer >
+                    <NumberStyle>
+                        {rok}:
+                    </NumberStyle>
+                    <CounterStyle>
+                        <CounterContent className="fas fa-car-crash"></CounterContent>
+                        <CounterContent>{liczbaWypadkow}</CounterContent>
+                    </CounterStyle>
+                    
+                    <CounterStyle>
+                        <CounterContent className="fas fa-skull-crossbones"></CounterContent>
+                        <CounterContent>{liczbaZabitych}</CounterContent>
+                    </CounterStyle>
+  
+                    <CounterStyle>
+                        <CounterContent className="fas fa-user-injured"></CounterContent>
+                        <CounterContent>{liczbaRannych}</CounterContent>
+                    </CounterStyle> 
+                                       
+                </CounterContainer>
+          
         )
     }
 }
+
+
+const CounterContainer = styled.div`
+display: flex;
+justify-content: space-around;
+padding: 1rem 0 ;
+`
+
+const CounterStyle = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+min-width: 70px;
+`
+
+const CounterContent = styled.span`
+padding: .3rem;
+font-size: 1.2rem;
+`
+
+const NumberStyle = styled.div`
+display: flex;
+align-items: flex-start;
+font-size: 1.7rem;
+color: rgba(241, 60, 32, 1);
+`
+
+const ParagraphStyle = styled.p`
+font-size: 10px;
+color: rgba(241, 60, 32, 1);
+`
+
 
 export default Counter

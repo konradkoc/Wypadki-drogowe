@@ -6,7 +6,7 @@ import { checkSort } from './utils/checkSort'
 
 const INITIAL_STATE = {
     
-    color: '#32a213',
+    color: 'rgb(35, 121, 140)',
     obszar: 'polska',
     rok: 2018,
     rokPoczatkowy: 2017,

@@ -10,7 +10,9 @@ export const labelsDirection = () => (
 
 export const titleSize = width => {
 
-    if (width < 500) {
+    if (width < 400) {
+        return 10
+    } else if (width < 500) {
         return 12
     } else if (width < 850) {
         return 14

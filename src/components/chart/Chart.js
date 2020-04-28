@@ -4,9 +4,10 @@ import { Bar } from 'react-chartjs-2'
 import { labelsDirection, titleSize } from './chart.utils'
 import 'chartjs-plugin-datalabels'
 import 'chartjs-plugin-annotation'
+import styled from 'styled-components'
 
 const Chart = ( {chart:{ color, labelsForTheGraph, dataForTheGraph, title, values, average, animation, grid} } ) => (
-    <div className = 'container chart'>
+    <ChartContainer>
         <Bar
             data={{
                 labels: labelsForTheGraph,
@@ -46,7 +47,7 @@ const Chart = ( {chart:{ color, labelsForTheGraph, dataForTheGraph, title, value
                         mode: 'horizontal',
                         scaleID: 'y-axis-0',
                         value: dataForTheGraph.reduce((a,b) => a + b)/dataForTheGraph.length, //avg value
-                        borderColor: 'red',
+                        borderColor: '#F13C20',
                         borderWidth: 1.2,
                     }]
                 },
@@ -76,7 +77,7 @@ const Chart = ( {chart:{ color, labelsForTheGraph, dataForTheGraph, title, value
                 },
             }}
         />
-    </div>
+    </ChartContainer>
 )
 
 const mapStateToProps = state => ({
@@ -85,3 +86,12 @@ const mapStateToProps = state => ({
 
 
 export default connect(mapStateToProps)(Chart)
+
+
+const ChartContainer = styled.div`
+background-color: #FFF;
+padding-bottom: 1rem;
+margin-top 1rem;
+border-radius: 4px;
+
+`

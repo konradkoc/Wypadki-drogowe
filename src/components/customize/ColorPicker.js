@@ -5,7 +5,7 @@ import { selectColor } from '../../redux/chart/chart.actions'
 
 
 const ColorPicker = ( {color, selectColor} ) => (
-        <SliderPicker 
+        <SliderPicker
             color = { color }
             onChangeComplete = { selectColor } /> 
 )
