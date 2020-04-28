@@ -18,12 +18,9 @@ export const titleSize = width => {
         return 14
     } else if (width < 1000) {
         return 18
-    } else if (width < 1200) {
-        return 20
     } else {
-        return 25
+        return 20
     }
-
 }
 
             

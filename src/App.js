@@ -27,6 +27,10 @@ const Title = styled.h1`
 font-size: 1.7rem;
 padding: .3rem;
 text-align: center;
+
+@media (min-width: 1000px) {
+  font-size: 2.5rem;
+}
 `
 
 const SubTitle = styled.h2`

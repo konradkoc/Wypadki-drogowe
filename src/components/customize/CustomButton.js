@@ -22,5 +22,14 @@ width: 68px;
 border-radius: 5px;
 background-color: #19181A;
 color: #f2f2f2;
-border: ${({value}) => value ? '2px solid #F13C20' : 'none'}
+border: ${({value}) => value ? '2px solid #F13C20' : 'none'};
+cursor: pointer;
+
+@media (min-width: 1000px) {
+    font-size: 1rem;
+    padding: .5rem 2rem;
+    width: 150px;
+}
+
+
 `

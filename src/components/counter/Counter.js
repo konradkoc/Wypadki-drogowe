@@ -83,6 +83,7 @@ const CounterContainer = styled.div`
 display: flex;
 justify-content: space-around;
 padding: 1rem 0 ;
+
 `
 
 const CounterStyle = styled.div`
@@ -103,11 +104,11 @@ display: flex;
 align-items: flex-start;
 font-size: 1.7rem;
 color: rgba(241, 60, 32, 1);
-`
 
-const ParagraphStyle = styled.p`
-font-size: 10px;
-color: rgba(241, 60, 32, 1);
+@media (min-width: 1000px) {
+    font-size: 3rem;
+    align-items: center;
+}
 `
 
 
