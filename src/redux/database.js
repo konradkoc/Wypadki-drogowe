@@ -1,51 +1,55 @@
 export const zestawienie = []
-export const years = [ 2018,2017,2016,2015,2014,2013,2012,2011 ]
+export const years = [ 2019, 2018,2017,2016,2015,2014,2013,2012,2011,2010 ]
 
 export const dataForCounter = {
-
+    '_2019' : {
+        liczbaWypadkow: 30288,
+        liczbaZabitych: 2909,
+        liczbaRannych: 35477,
+    },
     '_2018' : {
         liczbaWypadkow: 31674,
         liczbaZabitych: 2862,
         liczbaRannych: 37359,
     },
     '_2017' : {
-        liczbaWypadkow: 1111,
-        liczbaZabitych: 2862,
+        liczbaWypadkow: 32760,
+        liczbaZabitych: 2831,
         liczbaRannych: 37359,
     },
     '_2016' : {
-        liczbaWypadkow: 2212,
-        liczbaZabitych: 2862,
-        liczbaRannych: 37359,
+        liczbaWypadkow: 33664,
+        liczbaZabitych: 3026,
+        liczbaRannych: 40766,
     },
     '_2015' : {
-        liczbaWypadkow: 3212,
-        liczbaZabitych: 2862,
-        liczbaRannych: 37359,
+        liczbaWypadkow: 32967,
+        liczbaZabitych: 2938,
+        liczbaRannych: 39778,
     },
     '_2014' : {
-        liczbaWypadkow: 4313,
-        liczbaZabitych: 2862,
-        liczbaRannych: 37359,
+        liczbaWypadkow: 34970,
+        liczbaZabitych: 3202,
+        liczbaRannych: 42545,
     },
     '_2013' : {
-        liczbaWypadkow: 5131,
-        liczbaZabitych: 2862,
-        liczbaRannych: 37359,
+        liczbaWypadkow: 35847,
+        liczbaZabitych: 3357,
+        liczbaRannych: 44059,
     },
     '_2012' : {
-        liczbaWypadkow: 63131,
-        liczbaZabitych: 2862,
-        liczbaRannych: 37359,
+        liczbaWypadkow: 37046,
+        liczbaZabitych: 3571,
+        liczbaRannych: 45792,
     },'_2011' : {
-        liczbaWypadkow: 7313,
-        liczbaZabitych: 2862,
-        liczbaRannych: 37359,
+        liczbaWypadkow: 40065,
+        liczbaZabitych: 4189,
+        liczbaRannych: 49501,
         
     },'_2010' : {
-        liczbaWypadkow: 9313,
-        liczbaZabitych: 2862,
-        liczbaRannych: 37359,
+        liczbaWypadkow: 38832,
+        liczbaZabitych: 3907,
+        liczbaRannych: 48952,
     }
 
 }
@@ -82,6 +86,41 @@ class Zestawienie {
     }
 }
 
+//ROK 2019
+const polska2019 = new Zestawienie(2019, "polska", 38386476, 30288, 2909, 35477)
+    zestawienie.push(polska2019)
+const dolnoslaskie2019 = new Zestawienie(2019, "dolnośląskie", 2899986, 1929, 215, 2275)
+    zestawienie.push(dolnoslaskie2019)
+const kujawskopomorskie2019 = new Zestawienie(2019, "kujawsko-pomorskie", 2074517, 940, 211, 974)
+    zestawienie.push(kujawskopomorskie2019)
+const lubelskie2019 = new Zestawienie(2019, "lubelskie", 2112216, 1139, 170, 1233)
+    zestawienie.push(lubelskie2019)
+const lubuskie2019 = new Zestawienie(2019, "lubuskie", 1013031, 660, 92, 775)
+    zestawienie.push(lubuskie2019)
+const lodzkie2019 = new Zestawienie(2019, "łódzkie", 2460170 , 3351, 239, 4047)
+    zestawienie.push(lodzkie2019)
+const malopolskie2019 = new Zestawienie(2019, "małopolskie",  3404863, 3136 , 176, 3716)
+    zestawienie.push(malopolskie2019)
+const mazowieckie2019 = new Zestawienie(2019, "mazowieckie", 5411446, 3802, 469, 4391)
+    zestawienie.push(mazowieckie2019)
+const opolskie2019 = new Zestawienie(2019, "opolskie", 984345, 614, 73, 703)
+    zestawienie.push(opolskie2019)
+const podkarpackie2019 = new Zestawienie(2019, "podkarpackie", 2127462, 1481, 157, 1708)
+    zestawienie.push(podkarpackie2019)
+const podlaskie2019 = new Zestawienie(2019, "podlaskie", 1179430, 585, 106, 620)
+    zestawienie.push(podlaskie2019)
+const pomorskie2019 = new Zestawienie(2019, "pomorskie", 2337769, 2297, 160, 2775)
+    zestawienie.push(pomorskie2019)
+const slaskie2019 = new Zestawienie(2019, "śląskie", 4524091, 2965, 199, 3561)
+    zestawienie.push(slaskie2019)
+const swietokrzyskie2019 = new Zestawienie(2019, "świętokrzyskie", 1237369, 1056, 131, 1241)
+    zestawienie.push(swietokrzyskie2019)
+const warminskomazurskie2019 = new Zestawienie(2019, "warmińsko-mazurskie", 1425967, 1218, 103, 1486)
+    zestawienie.push(warminskomazurskie2019)
+const wielkopolskie2019 = new Zestawienie(2019, "wielkopolskie",  3495470, 3894, 279, 4566)
+    zestawienie.push(wielkopolskie2019)
+const zachodniopomorskie2019 = new Zestawienie(2019, "zachodniopomorskie", 1698344, 1221, 129, 1406)
+    zestawienie.push(zachodniopomorskie2019)
 
 //ROK 2018
 const polska2018 = new Zestawienie(2018, "polska", 38413139, 31674, 2862, 37359)
@@ -264,3 +303,147 @@ const wielkopolskie2014 = new Zestawienie(2014, "wielkopolskie",  3469464, 2392,
 zestawienie.push(wielkopolskie2014)
 const zachodniopomorskie2014 = new Zestawienie(2014, "zachodniopomorskie", 1717970, 1418, 147, 1717)
 zestawienie.push(zachodniopomorskie2014)
+
+//ROK2013
+const polska2013 = new Zestawienie(2013, "polska", 38533299, 35847, 3357, 44059)
+zestawienie.push(polska2013)
+const dolnoslaskie2013 = new Zestawienie(2013, "dolnośląskie", 2914362, 2586, 223, 3385)
+zestawienie.push(dolnoslaskie2013)
+const kujawskopomorskie2013 = new Zestawienie(2013, "kujawsko-pomorskie", 2096404, 1182, 179, 1365)
+zestawienie.push(kujawskopomorskie2013)
+const lubelskie2013 = new Zestawienie(2013, "lubelskie", 2165651, 1497, 250, 1795)
+zestawienie.push(lubelskie2013)
+const lubuskie2013 = new Zestawienie(2013, "lubuskie",  1023317, 747, 94, 1019)
+zestawienie.push(lubuskie2013)
+const lodzkie2013 = new Zestawienie(2013, "łódzkie",  2524651 , 3830, 263, 4733)
+zestawienie.push(lodzkie2013)
+const malopolskie2013 = new Zestawienie(2013, "małopolskie",  3354077, 3764, 221, 4659)
+zestawienie.push(malopolskie2013)
+const mazowieckie2013 = new Zestawienie(2013, "mazowieckie", 5301760, 4579, 562, 5511)
+zestawienie.push(mazowieckie2013)
+const opolskie2013 = new Zestawienie(2013, "opolskie", 1010203, 791, 97, 923)
+zestawienie.push(opolskie2013)
+const podkarpackie2013 = new Zestawienie(2013, "podkarpackie",  2129951, 1807, 151, 2251)
+zestawienie.push(podkarpackie2013)
+const podlaskie2013 = new Zestawienie(2013, "podlaskie",  1198690, 738, 135, 874)
+zestawienie.push(podlaskie2013)
+const pomorskie2013 = new Zestawienie(2013, "pomorskie",  2290070, 2641, 174, 3405)
+zestawienie.push(pomorskie2013)
+const slaskie2013 = new Zestawienie(2013, "śląskie", 4615870, 4529, 267, 5506)
+zestawienie.push(slaskie2013)
+const swietokrzyskie2013 = new Zestawienie(2013, "świętokrzyskie",  1273995, 1399, 143, 1727)
+zestawienie.push(swietokrzyskie2013)
+const warminskomazurskie2013 = new Zestawienie(2013, "warmińsko-mazurskie", 1450697, 1621, 154, 1968)
+zestawienie.push(warminskomazurskie2013)
+const wielkopolskie2013 = new Zestawienie(2013, "wielkopolskie",  3462196, 2633, 289, 3126)
+zestawienie.push(wielkopolskie2013)
+const zachodniopomorskie2013 = new Zestawienie(2013, "zachodniopomorskie", 1721405, 1503, 155, 1812)
+zestawienie.push(zachodniopomorskie2013)
+
+    //ROK2012
+const polska2012 = new Zestawienie(2012, "polska", 38538447, 37046, 3571, 45792)
+zestawienie.push(polska2012)
+const dolnoslaskie2012 = new Zestawienie(2012, "dolnośląskie", 2916577, 3211, 238, 4263)
+zestawienie.push(dolnoslaskie2012)
+const kujawskopomorskie2012 = new Zestawienie(2012, "kujawsko-pomorskie", 2098370, 1319, 222, 1486)
+zestawienie.push(kujawskopomorskie2012)
+const lubelskie2012 = new Zestawienie(2012, "lubelskie", 2171857, 1623, 241, 1877)
+zestawienie.push(lubelskie2012)
+const lubuskie2012 = new Zestawienie(2012, "lubuskie",  1023158, 803, 99, 1086)
+zestawienie.push(lubuskie2012)
+const lodzkie2012 = new Zestawienie(2012, "łódzkie",  2533681 , 3903, 295, 4844)
+zestawienie.push(lodzkie2012)
+const malopolskie2012 = new Zestawienie(2012, "małopolskie",  3346796, 3902, 253, 4775)
+zestawienie.push(malopolskie2012)
+const mazowieckie2012 = new Zestawienie(2012, "mazowieckie", 5285604, 4509, 584, 5384)
+zestawienie.push(mazowieckie2012)
+const opolskie2012 = new Zestawienie(2012, "opolskie", 1013950, 798, 82, 977)
+zestawienie.push(opolskie2012)
+const podkarpackie2012 = new Zestawienie(2012, "podkarpackie",  2128687, 1801, 184, 2247)
+zestawienie.push(podkarpackie2012)
+const podlaskie2012 = new Zestawienie(2012, "podlaskie",  1200982, 767, 131, 970)
+zestawienie.push(podlaskie2012)
+const pomorskie2012 = new Zestawienie(2012, "pomorskie",  2283500, 2763, 179, 3568)
+zestawienie.push(pomorskie2012)
+const slaskie2012 = new Zestawienie(2012, "śląskie", 4626357, 4675, 336, 5707)
+zestawienie.push(slaskie2012)
+const swietokrzyskie2012 = new Zestawienie(2012, "świętokrzyskie",  1278116, 1393, 136, 1713)
+zestawienie.push(swietokrzyskie2012)
+const warminskomazurskie2012 = new Zestawienie(2012, "warmińsko-mazurskie", 1452596, 1607, 145, 2066)
+zestawienie.push(warminskomazurskie2012)
+const wielkopolskie2012 = new Zestawienie(2012, "wielkopolskie",  3455477, 2565, 315, 3085)
+zestawienie.push(wielkopolskie2012)
+const zachodniopomorskie2012 = new Zestawienie(2012, "zachodniopomorskie", 1722739, 1407, 131, 1744)
+zestawienie.push(zachodniopomorskie2012)
+
+//ROK2011
+const polska2011 = new Zestawienie(2011, "polska", 38200037, 40065, 4189, 49501)
+zestawienie.push(polska2011)
+const dolnoslaskie2011 = new Zestawienie(2011, "dolnośląskie", 2877840, 2948, 258, 3948)
+zestawienie.push(dolnoslaskie2011)
+const kujawskopomorskie2011 = new Zestawienie(2011, "kujawsko-pomorskie", 2069543, 1336, 234, 1463)
+zestawienie.push(kujawskopomorskie2011)
+const lubelskie2011 = new Zestawienie(2011, "lubelskie", 2151895, 1798, 252, 2250)
+zestawienie.push(lubelskie2011)
+const lubuskie2011 = new Zestawienie(2011, "lubuskie",  1011024, 823, 122, 1086)
+zestawienie.push(lubuskie2011)
+const lodzkie2011 = new Zestawienie(2011, "łódzkie",  2534357 , 4266, 322, 5231)
+zestawienie.push(lodzkie2011)
+const malopolskie2011 = new Zestawienie(2011, "małopolskie",  3310094, 4364, 312, 5425)
+zestawienie.push(malopolskie2011)
+const mazowieckie2011 = new Zestawienie(2011, "mazowieckie", 5242911, 5130, 712, 6148)
+zestawienie.push(mazowieckie2011)
+const opolskie2011 = new Zestawienie(2011, "opolskie", 1028585, 836, 99, 1001)
+zestawienie.push(opolskie2011)
+const podkarpackie2011 = new Zestawienie(2011, "podkarpackie",  2103505, 2104, 224, 2620)
+zestawienie.push(podkarpackie2011)
+const podlaskie2011 = new Zestawienie(2011, "podlaskie",  1188329, 816, 152, 1006)
+zestawienie.push(podlaskie2011)
+const pomorskie2011 = new Zestawienie(2011, "pomorskie",  2240319, 2910, 222, 3711)
+zestawienie.push(pomorskie2011)
+const slaskie2011 = new Zestawienie(2011, "śląskie", 4635882, 5031, 347, 6111)
+zestawienie.push(slaskie2011)
+const swietokrzyskie2011 = new Zestawienie(2011, "świętokrzyskie",  1266014, 1516, 179, 1855)
+zestawienie.push(swietokrzyskie2011)
+const warminskomazurskie2011 = new Zestawienie(2011, "warmińsko-mazurskie", 1427241, 1647, 179, 2098)
+zestawienie.push(warminskomazurskie2011)
+const wielkopolskie2011 = new Zestawienie(2011, "wielkopolskie",  3419426, 2996, 405, 3663)
+zestawienie.push(wielkopolskie2011)
+const zachodniopomorskie2011 = new Zestawienie(2011, "zachodniopomorskie", 1693072, 1544, 170, 1885)
+zestawienie.push(zachodniopomorskie2011)
+
+//ROK2010
+const polska2010 = new Zestawienie(2010, "polska", 38200037, 38832, 3907, 48952)
+zestawienie.push(polska2010)
+const dolnoslaskie2010 = new Zestawienie(2010, "dolnośląskie", 2877121, 2294, 241, 3098)
+zestawienie.push(dolnoslaskie2010)
+const kujawskopomorskie2010 = new Zestawienie(2010, "kujawsko-pomorskie", 2069575, 1490, 228, 1799)
+zestawienie.push(kujawskopomorskie2010)
+const lubelskie2010 = new Zestawienie(2010, "lubelskie", 2154892, 1820, 256, 2288)
+zestawienie.push(lubelskie2010)
+const lubuskie2010 = new Zestawienie(2010, "lubuskie",  1010705, 845, 108, 1113)
+zestawienie.push(lubuskie2010)
+const lodzkie2010 = new Zestawienie(2010, "łódzkie",  2538451 , 4157, 320, 5226)
+zestawienie.push(lodzkie2010)
+const malopolskie2010 = new Zestawienie(2010, "małopolskie",  2354932, 4003, 235, 5046)
+zestawienie.push(malopolskie2010)
+const mazowieckie2010 = new Zestawienie(2010, "mazowieckie", 6181837, 5190, 655, 6339)
+zestawienie.push(mazowieckie2010)
+const opolskie2010 = new Zestawienie(2010, "opolskie", 1029894, 836, 107, 1028)
+zestawienie.push(opolskie2010)
+const podkarpackie2010 = new Zestawienie(2010, "podkarpackie",  2102742, 1961, 202, 2571)
+zestawienie.push(podkarpackie2010)
+const podlaskie2010 = new Zestawienie(2010, "podlaskie",  1189175, 847, 146, 1125)
+zestawienie.push(podlaskie2010)
+const pomorskie2010 = new Zestawienie(2010, "pomorskie",  2235511, 2660, 198, 3406)
+zestawienie.push(pomorskie2010)
+const slaskie2010 = new Zestawienie(2010, "śląskie", 4638462, 5015, 352, 6132)
+zestawienie.push(slaskie2010)
+const swietokrzyskie2010 = new Zestawienie(2010, "świętokrzyskie",  1268271, 1574, 197, 2017)
+zestawienie.push(swietokrzyskie2010)
+const warminskomazurskie2010 = new Zestawienie(2010, "warmińsko-mazurskie", 1427587, 1725, 168, 2338)
+zestawienie.push(warminskomazurskie2010)
+const wielkopolskie2010 = new Zestawienie(2010, "wielkopolskie",  3414185, 2930, 343, 3624)
+zestawienie.push(wielkopolskie2010)
+const zachodniopomorskie2010 = new Zestawienie(2010, "zachodniopomorskie", 1693520, 1485, 151, 1802)
+zestawienie.push(zachodniopomorskie2010)

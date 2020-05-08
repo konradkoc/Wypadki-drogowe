@@ -11,9 +11,9 @@ body {
 	color: #F0F0F0;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
 	#root {
-	  width: 900px;
+	  width: 1200px;
 	  margin: auto;
 	  background-color: black;
 	  padding: 1rem 2rem;

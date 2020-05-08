@@ -50,7 +50,4 @@ const Container = styled.div`
         background-position: center;
         background-size: cover;
     }
-
-
-
 `
