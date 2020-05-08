@@ -1,3 +1,11 @@
+This project is about car accidents in Poland. <br />
+Road designers often need those stats, so I decided to make them available in the form of a graph. <br />
+If You don't know polish, just click around ;)
+Options above the graph are about data to display <br />
+
+Rest of the readme was created by create-react-app <br />
+
+---------------------
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
